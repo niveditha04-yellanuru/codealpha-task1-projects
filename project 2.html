@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Introduction Section */
+    .intro {
+      background-color: #fff;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .intro img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .intro h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #666;
+    }
+
+    /* About Section */
+    .about {
+      background-color: #f9f9f9;
+      padding: 60px 0;
+    }
+
+    .about h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* Projects Section */
+    .projects {
+      background-color: #fff;
+      padding: 60px 0;
+    }
+
+    .projects h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .project {
+      background-color: #f4f4f4;
+      width: 45%;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #f9f9f9;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .project {
+        width: 100%;
+      }
+
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#intro">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Introduction Section -->
+  <section class="intro" id="intro">
+    <div class="container">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture">
+      <h2>Hello, I'm [Your Name]</h2>
+      <p>Web Developer | Designer | Programmer</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate web developer with experience in creating dynamic and responsive websites. I enjoy turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, you'll find me exploring the latest technology trends or reading a good book.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>Project One</h3>
+          <p>A brief description of your project. Highlight the technologies used and the purpose of the project.</p>
+        </div>
+        <div class="project">
+          <h3>Project Two</h3>
+          <p>A brief description of your project. Highlight the technologies used and the purpose of the project.</p>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: your.email@example.com</p>
+      <p>Phone: +91-1234567890</p>
+      <p>Location: Anantapur, Andhra Pradesh, India</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
