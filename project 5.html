@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Authentication</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .container {
+      width: 300px;
+      margin: auto;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      width: 95%;
+      padding: 10px;
+      background: #4caf50;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #securePage {
+      display: none;
+      margin-top: 20px;
+      color: #00ff99;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="authContainer">
+    <h2>Register</h2>
+    <input type="text" id="regUser" placeholder="Username" />
+    <input type="password" id="regPass" placeholder="Password" />
+    <button onclick="register()">Register</button>
+
+    <h2>Login</h2>
+    <input type="text" id="loginUser" placeholder="Username" />
+    <input type="password" id="loginPass" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="message"></p>
+  </div>
+
+  <div id="securePage">
+    <h2>Welcome to the Secured Page!</h2>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    function register() {
+      const user = document.getElementById('regUser').value;
+      const pass = document.getElementById('regPass').value;
+      if (user && pass) {
+        localStorage.setItem(user, pass);
+        alert('Registration successful!');
+      } else {
+        alert('Please enter username and password.');
+      }
+    }
+
+    function login() {
+      const user = document.getElementById('loginUser').value;
+      const pass = document.getElementById('loginPass').value;
+      const storedPass = localStorage.getItem(user);
+      const message = document.getElementById('message');
+
+      if (storedPass === pass) {
+        message.textContent = '';
+        document.getElementById('authContainer').style.display = 'none';
+        document.getElementById('securePage').style.display = 'block';
+      } else {
+        message.textContent = 'Invalid credentials!';
+      }
+    }
+
+    function logout() {
+      document.getElementById('authContainer').style.display = 'block';
+      document.getElementById('securePage').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
